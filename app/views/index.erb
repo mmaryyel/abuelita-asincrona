@@ -5,11 +5,13 @@
     <p>Tu abuelita dice: "<span id="grandma_says"><%= @abuelita %></span>"</p>
   <% end %>
 
+  <div id="answer"></div>
   <form action="/abuelita" method="post">
     Dile algo a tu abuelita:
     <br>
     <input type="text" name="user_input">
     <input type="submit" value="Dilo!">
+  
   </form>
 </div>
 

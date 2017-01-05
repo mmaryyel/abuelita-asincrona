@@ -9,13 +9,13 @@ end
 post '/abuelita' do
   @abuelita_input = params[:user_input]
   if @abuelita_input == @abuelita_input.upcase
-    @abuelita_input = "Why are you yelling '" + @abuelita_input + "'?"
+    "Why are you yelling '" + @abuelita_input + "'?"
   elsif @abuelita_input == "bye"
-    @abuelita_input = "bye honney"
+    "bye honney"
   else
-    @abuelita_input = "Speak up, kiddo!"
+    "Speak up, kiddo!"
   end
-  redirect to("/?abuelita=#{@abuelita_input}")
+  # redirect to("/?abuelita=#{@abuelita_input}")
 
   
 end
