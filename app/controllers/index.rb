@@ -7,14 +7,17 @@ get '/' do
 end
 
 post '/abuelita' do
-  @abuelita = params[:user_input]
-  if @abuelita == @abuelita.upcase
-    @abuelita = "Why are you yelling '" + @abuelita + "'?"
-  elsif @abuelita == "bye"
-    @abuelita = "bye honney"
+  @abuelita_input = params[:user_input]
+  if @abuelita_input == @abuelita_input.upcase
+    @abuelita_input = "Why are you yelling '" + @abuelita_input + "'?"
+  elsif @abuelita_input == "bye"
+    @abuelita_input = "bye honney"
   else
-    @abuelita = "Speak up, kiddo!"
+    @abuelita_input = "Speak up, kiddo!"
+  end
+  redirect to("/?abuelita=#{@abuelita_input}")
+
   
 end
-  erb :index
-end
+
+
